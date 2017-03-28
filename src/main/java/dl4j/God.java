@@ -104,6 +104,7 @@ public class God {
      */
     private void attachStatsServer(MultiLayerNetwork model) throws IOException {
         File ui = File.createTempFile("ui-server-dl4j", "bin");
+        ui.delete();
         StatsStorage statsStorage = new FileStatsStorage(ui);             //Alternative: new FileStatsStorage(File) - see UIStorageExample
         model.setListeners(new StatsListener(statsStorage), new ScoreIterationListener(1));
 
