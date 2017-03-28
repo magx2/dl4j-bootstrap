@@ -103,7 +103,7 @@ public class God {
      * Visualization https://deeplearning4j.org/visualization
      */
     private void attachStatsServer(MultiLayerNetwork model) throws IOException {
-        File ui = File.createTempFile("ui", "bin");
+        File ui = File.createTempFile("ui-server-dl4j", "bin");
         StatsStorage statsStorage = new FileStatsStorage(ui);             //Alternative: new FileStatsStorage(File) - see UIStorageExample
         model.setListeners(new StatsListener(statsStorage), new ScoreIterationListener(1));
 
