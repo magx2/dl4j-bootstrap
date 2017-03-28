@@ -23,3 +23,7 @@ dependencies {
 
     compile group: 'com.google.guava', name: 'guava', version: '21.0'
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.4.1'
+}
