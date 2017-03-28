@@ -39,6 +39,9 @@ public class God {
         evaluate(model, dataIter);
     }
 
+    /**
+     * Output Interpretation https://deeplearning4j.org/output
+     */
     private void evaluate(MultiLayerNetwork model, DataSetIterator dataIter) {
         Evaluation eval = new Evaluation(outputNum);
 
